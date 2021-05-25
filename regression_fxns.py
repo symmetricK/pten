@@ -26,7 +26,6 @@ def get_regression_parameters(array1, array2):
     INPUT: array1, array2: two data arrays
     OUTPUT: regression_array, length 2: regression_array[0] is slope and regression_array[1] is intercept'''
 
-    #test
     xstd=np.std(array1)
     ystd=np.std(array2)
     slope=calc_corrcoef_from_standardized_input(make_standard_units(array1),(make_standard_units(array2)))*(ystd/xstd)
