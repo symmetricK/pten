@@ -29,7 +29,7 @@ def get_regression_parameters(array1, array2):
     #test
     xstd=np.std(array1)
     ystd=np.std(array2)
-    slope=calc_corrcoef_from_standardized_input(array1,array2)*(ystd/xstd)
+    slope=calc_corrcoef_from_standardized_input(make_standard_units(array1),(make_standard_units(array2)))*(ystd/xstd)
 
     xmean=np.mean(array1)
     ymean=np.mean(array2)
